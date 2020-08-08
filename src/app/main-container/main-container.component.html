@@ -2,5 +2,7 @@
     <p>Some text</p>
     <p>Some array {{ array }}</p>
     <p>Some chosen number: {{ number }}</p>
+    <input type="text" (keyup)='onNameKeyUp($event)'/>
+    <button (click)='getDemo()'>Get</button>
     <app-inner-container [array]='array' (eventFromInner)='eventFromInner($event)'></app-inner-container>
 </div>

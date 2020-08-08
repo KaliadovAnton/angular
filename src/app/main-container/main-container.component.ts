@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-main-container',
@@ -8,11 +9,20 @@ import { Component, OnInit, Output, Input } from '@angular/core';
 export class MainContainerComponent implements OnInit {
   array = [1, 2, 3, 4]
   number: number = 0;
-  constructor() { }
+  message: string;
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
   }
   eventFromInner(cipher){
     this.number = cipher;
+  }
+  onNameKeyUp(event: any){
+    this.message = event.target.value;
+  }
+  getDemo(){
+    this.httpClient
+    .get(`https://restcountries.eu/rest/v2/name/${this.message}`)
+    .subscribe((data)=> console.log(data[0]));
   }
 }

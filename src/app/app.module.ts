@@ -7,6 +7,7 @@ import { CanvasComponent } from './canvas/canvas.component';
 import { MainContainerComponent } from './main-container/main-container.component';
 import { InnerContainerComponent } from './inner-container/inner-container.component';
 import { LastContainerComponent } from './last-container/last-container.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LastContainerComponent } from './last-container/last-container.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
