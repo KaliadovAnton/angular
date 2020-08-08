@@ -9,7 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 export class LastContainerComponent implements OnInit {
 
 
-  @Input() array;
+  @Input() array: number[];
   @Input() cipher: number;
   @Output() eventChooseNumber = new EventEmitter<number>()
   constructor() { }

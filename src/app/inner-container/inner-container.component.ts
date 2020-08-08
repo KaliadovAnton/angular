@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class InnerContainerComponent implements OnInit {
 
 
-  @Input() array;
+  @Input() array: number[];
   @Output() eventFromInner = new EventEmitter<number>();
   number: number= 0;
   constructor() { }
