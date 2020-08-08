@@ -1,0 +1,12 @@
+<div class='inner'>
+    <p>
+        some text
+    </p>
+    <p>
+        Array from main container {{ array }}
+    </p>
+    <p>
+        selected number: {{ number }}
+    </p>
+        <app-last-container  [array]='array' *ngFor='let cipher of array' [cipher]='cipher' (eventChooseNumber)='eventChooseNumber($event)'></app-last-container>    
+</div>

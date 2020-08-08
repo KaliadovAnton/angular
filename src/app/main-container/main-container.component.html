@@ -1,0 +1,6 @@
+<div class='main'>
+    <p>Some text</p>
+    <p>Some array {{ array }}</p>
+    <p>Some chosen number: {{ number }}</p>
+    <app-inner-container [array]='array' (eventFromInner)='eventFromInner($event)'></app-inner-container>
+</div>
